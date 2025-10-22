@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Rede IPv4 Corrigido</title>
+    <!-- Link para a folha de estilos externa -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simulador de Rede IPv4</h1>
+        
+        <div class="network-config">
+            <div class="maquina">
+                <h2>Máquina 1</h2>
+                <div class="configuracao">
+                    <label for="ip1">Endereço IP:</label>
+                    <input type="text" id="ip1" value="192.168.1.10">
+
+                    <label for="mascara1">Máscara de Sub-rede:</label>
+                    <input type="text" id="mascara1" value="255.255.255.0">
+                </div>
+            </div>
+
+            <div class="maquina">
+                <h2>Máquina 2</h2>
+                <div class="configuracao">
+                    <label for="ip2">Endereço IP:</label>
+                    <input type="text" id="ip2" value="192.168.1.20">
+                    
+                    <label for="mascara2">Máscara de Sub-rede:</label>
+                    <input type="text" id="mascara2" value="255.255.255.0">
+                </div>
+            </div>
+
+            <div class="gateway-config">
+                <label for="gateway">Gateway Padrão:</label>
+                <input type="text" id="gateway" value="192.168.1.1">
+            </div>
+        </div>
+
+        <button onclick="configurarRede()">Verificar e Simular</button>
+
+        <div class="resultado" id="resultado"></div>
+    </div>
+
+    <!-- Link para o script externo -->
+    <script src="script.js"></script>
+</body>
+</html>
